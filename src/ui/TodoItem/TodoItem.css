@@ -19,3 +19,8 @@
 .TodoItem-p--complete {
   text-decoration: line-through;
 }
+
+.TodoItem--complete {
+  background-color: #1717174a;
+  border-radius: 20px;
+}

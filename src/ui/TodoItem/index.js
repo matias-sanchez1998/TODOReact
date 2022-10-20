@@ -1,11 +1,12 @@
 import React from 'react';
 import { CompleteIcon } from '../TodoIcon/CompleteIcon';
 import { DeleteIcon } from '../TodoIcon/DeleteIcon';
+import { EditIcon } from '../TodoIcon/EditIcon';
 import './TodoItem.css';
 
 function TodoItem(props) {
   return (
-    <li className="TodoItem">
+    <li className={`TodoItem ${props.completed && 'TodoItem--complete'}`}>
       <CompleteIcon
         completed={props.completed}
         onComplete={props.onComplete}
@@ -15,6 +16,9 @@ function TodoItem(props) {
       >
         {props.text}
       </p>
+      <EditIcon
+        onEdit={props.onEdit}
+      />
       <DeleteIcon
         onDelete={props.onDelete}
       />

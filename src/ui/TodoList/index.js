@@ -5,7 +5,9 @@ function TodoList(props) {
   const renderFunc = props.children || props.render;
   
   return (
-    <section className="TodoList-container">
+    <section className="TodoList-container"
+              
+    >
       {props.error && props.onError()}
       {props.loading && props.onLoading()}
 
